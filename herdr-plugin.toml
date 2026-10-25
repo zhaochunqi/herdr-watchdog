@@ -1,0 +1,13 @@
+id = "zhaochunqi.watchdog"
+name = "herdr Watchdog"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Heartbeat watchdog for fire-and-forget dispatch: when an agent enters `working` and stays there past the overdue threshold, prompt the dispatching main pane with heartbeat deep-check instructions."
+platforms = ["macos", "linux"]
+
+[[startup]]
+command = ["sh", "scripts/cleanup_stale.sh"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["sh", "scripts/on_status_change.sh"]
