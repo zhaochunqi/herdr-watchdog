@@ -1,6 +1,6 @@
 id = "zhaochunqi.watchdog"
 name = "herdr Watchdog"
-version = "0.1.0"
+version = "0.2.0"
 min_herdr_version = "0.9.5"
 description = "Heartbeat watchdog for fire-and-forget dispatch: when an agent enters `working` and stays there past the overdue threshold, prompt the dispatching main pane with heartbeat deep-check instructions."
 platforms = ["macos", "linux"]
